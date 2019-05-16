@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="gameViewModel"
+            type="android.leo.tic_tac_toemvvm.viewmodel.game.GameViewModel" />
+    </data>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="32dp"
+        android:rowCount="3"
+        android:columnCount="3">
+
+        <ImageView
+            android:id="@+id/cell_00"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:onClick="@{() -> gameViewModel.onClickedAtCell(0, 0)}"
+            app:imageResource='@{gameViewModel.cells["00"]}'
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:background="@drawable/cell_background" />
+
+        <ImageView
+            android:id="@+id/cell_01"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:onClick="@{() -> gameViewModel.onClickedAtCell(0, 1)}"
+            app:imageResource='@{gameViewModel.cells["01"]}'
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:background="@drawable/cell_background"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <ImageView
+            android:id="@+id/cell_02"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:onClick="@{() -> gameViewModel.onClickedAtCell(0, 2)}"
+            app:imageResource='@{gameViewModel.cells["02"]}'
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:background="@drawable/cell_background"/>
+
+        <ImageView
+            android:id="@+id/cell_10"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:onClick="@{() -> gameViewModel.onClickedAtCell(1, 0)}"
+            app:imageResource='@{gameViewModel.cells["10"]}'
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/cell_background"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:id="@+id/cell_11"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:onClick="@{() -> gameViewModel.onClickedAtCell(1, 1)}"
+            app:imageResource='@{gameViewModel.cells["11"]}'
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/cell_background"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:id="@+id/cell_12"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:onClick="@{() -> gameViewModel.onClickedAtCell(1, 2)}"
+            app:imageResource='@{gameViewModel.cells["12"]}'
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:background="@drawable/cell_background"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:id="@+id/cell_20"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:onClick="@{() -> gameViewModel.onClickedAtCell(2, 0)}"
+            app:imageResource='@{gameViewModel.cells["20"]}'
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_row="2"
+            android:layout_rowWeight="1"
+            android:background="@drawable/cell_background"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:id="@+id/cell_21"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:onClick="@{() -> gameViewModel.onClickedAtCell(2, 1)}"
+            app:imageResource='@{gameViewModel.cells["21"]}'
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_row="2"
+            android:layout_rowWeight="1"
+            android:background="@drawable/cell_background"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:id="@+id/cell_22"
+            style="@style/Base.TextAppearance.AppCompat.Button"
+            android:onClick="@{() -> gameViewModel.onClickedAtCell(2, 2)}"
+            app:imageResource='@{gameViewModel.cells["22"]}'
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_row="2"
+            android:layout_rowWeight="1"
+            android:background="@drawable/cell_background"
+            android:layout_marginTop="10dp"/>
+
+
+    </GridLayout>
+
+</layout>
